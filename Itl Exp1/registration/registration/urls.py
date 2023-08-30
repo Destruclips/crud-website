@@ -22,21 +22,21 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('firstpage/', views.FirstPage, name = 'firstpage'),
-    # path('',views.SignUpPage, name = 'signup'),
-    # path('login/', views.LoginPage, name = 'login'),
+    path('',views.SignUpPage, name = 'signup'),
+    path('login/', views.LoginPage, name = 'login'),
     # path('home/', views.HomePage, name = 'home'),
     # path('logout/', views.LogoutPage, name = 'logout'),
     # path('gallery/', views.GalleryPage, name = 'gallery'),
     # path('FAQ/', views.FAQPage, name = 'faq'),
     # path('Venue/', views.VenuePage, name = 'venue'),
-    #  path('Form/', views.FormPage, name = 'form'),
+     path('Form/', views.FormPage, name = 'form'),
    
     path('home1/',views.INDEX, name = 'home1'),
     path('add',views.ADD, name= 'add'),
     path('edit',views.EDIT, name= 'edit'),
     path('update/<str:id>',views.UPDATE, name= 'update'),
     path('delete/<str:id>',views.DELETE, name= 'delete'),
-    path('',views.HOMEPAGE, name = 'homepage'),
+    path('homepage/',views.HOMEPAGE, name = 'homepage'),
     
 ]
 

@@ -232,6 +232,12 @@
 	.modal form label {
 		font-weight: normal;
 	}
+	.btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
   </style>
   <body>
     <div class="container">
@@ -401,5 +407,12 @@
 		</div>
 	</div>
 	{%endfor%}
+	<div class="btn">
+		<a href="https://in.tradingview.com/chart/HFoFQonh/"><button class = "btn btn-primary">Watch the Commodities</button></a>
+	</div>
+	<div class="btn">
+		<a href="{% url 'form' %}"><button class = "btn btn-primary">Order</button></a>
+	</div>
+	
 </body>
 </html>
