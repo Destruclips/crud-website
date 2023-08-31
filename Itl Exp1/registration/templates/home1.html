@@ -245,6 +245,13 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" id="search" class="form-control" placeholder="Search...">
+								</div>
+							</div>
+						</div>
 						<h2>Details of Customer</h2>
 					</div>
 					<div class="col-sm-6">
@@ -261,6 +268,9 @@
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
 							</span>
+							<div>
+								
+							</div>
 						</th>
                         <th>Name</th>
                         <th>Email</th>
@@ -408,11 +418,23 @@
 	</div>
 	{%endfor%}
 	<div class="btn">
-		<a href="https://in.tradingview.com/chart/HFoFQonh/"><button class = "btn btn-primary">Watch the Commodities</button></a>
+		<a href="https://in.tradingview.com/"><button class = "btn btn-primary">Watch the Commodities</button></a>
 	</div>
 	<div class="btn">
 		<a href="{% url 'form' %}"><button class = "btn btn-primary">Order</button></a>
 	</div>
+	
+	
+		<script>
+			$(document).ready(function () {
+				$('#search').on('keyup', function () {
+					var searchText = $(this).val().toLowerCase();
+					$('table tbody tr').filter(function () {
+						$(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+					});
+				});
+			});
+			</script>
 	
 </body>
 </html>
